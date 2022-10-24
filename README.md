@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+## Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You've learned that components in React allow for modularity and reuse, with the ability to make data more dynamic by passing it from the parent to the child using props.
 
-## Available Scripts
+In this exercise, you'll render one component multiple times, to practice using different props and observing what exactly "reusing" components means.
 
-In the project directory, you can run:
+## Instructions
 
-### `npm start`
+### **Step 1**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This task's starting point is the App component's h1 element that reads: "Task: Add three Card elements".
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+However, there is no Card component's JS file in this starting code. Thus, the first task is to add a `Card.js` file, and inside of that file, declare a `Card` function.
 
-### `npm test`
+### **Step 2**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inside the `Card.js` file's `Card` function, add a `return` statement with two parentheses after it, to allow the `return` statement to spread onto several lines.
 
-### `npm run build`
+### **Step 3**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inside the `return` statement, add a wrapping `div` element.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Step 4**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Inside the wrapping `div` element, add an `h2` element, and under it, an `h3` element.
 
-### `npm run eject`
+### **Step 5**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Inside the `h2` element you've already added, add the JSX expression of: `{props.h2}`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Step 6**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Inside the `h3` element you've already added, add the JSX expression of: `{props.h3}`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **Step 7**
 
-## Learn More
+Don't forget to add the line of code that reads `export default Card` at the very bottom of the Cards.js file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Step 8**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Back inside the App component, import the `Card` component.
 
-### Code Splitting
+### **Step 9**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Inside the App component's `return` statement, under the `h1` element, add three `<Card />` JSX elements.
 
-### Analyzing the Bundle Size
+### **Step 10**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Add the `h2` prop to the first `<Card />` element, like this: `h2="First card's h2"`.
 
-### Making a Progressive Web App
+### **Step 11**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Add the `h3` prop to the first `<Card />` element, like this: `h3="First card's h3"`.
 
-### Advanced Configuration
+### **Step 12**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Add the `h2` and `h3` props to the second `<Card />` element, with the `h2` reading: "Second card's h2", and the `h3` reading "Second card's h3".
 
-### Deployment
+### **Step 13**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Add the `h2` and `h3` props to the third `<Card />` element, with the `h2` reading: "Third card's h2", and the `h3` reading "Third card's h3".
 
-### `npm run build` fails to minify
+### **Step 14**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Add the `className` attribute the Card.js file's `Card` function's `return` statement's wrapping `div` element.
+
+### **S​tep 15**
+
+Save and view the app in the browser.
+
+### **Tip**
+
+If you’re having trouble with this lab, please review the "Expressions as props" video lesson item.
